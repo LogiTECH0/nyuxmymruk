@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Сайт до дня народження Nyuxmumryk</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <script>
+        function convertCurrency() {
+            const amount = parseFloat(document.getElementById('amount').value);
+            const fromCurrency = document.getElementById('fromCurrency').value;
+            const toCurrency = document.getElementById('toCurrency').value;
+
+            const exchangeRates = {
+                'USD': 1,
+                'EUR': 0.85,
+                'UAH': 40.11
+            };
+
+            const result = (amount / exchangeRates[fromCurrency]) * exchangeRates[toCurrency];
+            document.getElementById('currencyResult').innerText = `Результат: ${result.toFixed(2)} ${toCurrency}`;
+        }
+
+        function convertTemperature() {
+            const temperature = parseFloat(document.getElementById('temperature').value);
+            const fromUnit = document.getElementById('fromUnit').value;
+            const toUnit = document.getElementById('toUnit').value;
+
+            let result;
+
+            if (fromUnit === 'Celsius') {
+                if (toUnit === 'Fahrenheit') {
+                    result = (temperature * 9/5) + 32;
+                } else if (toUnit === 'Kelvin') {
+                    result = temperature + 273.15;
+                } else {
+                    result = temperature;
+                }
+            } else if (fromUnit === 'Fahrenheit') {
+                if (toUnit === 'Celsius') {
+                    result = (temperature - 32) * 5/9;
+                } else if (toUnit === 'Kelvin') {
+                    result = (temperature - 32) * 5/9 + 273.15;
+                } else {
+                    result = temperature;
+                }
+            } else if (fromUnit === 'Kelvin') {
+                if (toUnit === 'Celsius') {
+                    result = temperature - 273.15;
+                } else if (toUnit === 'Fahrenheit') {
+                    result = (temperature - 273.15) * 9/5 + 32;
+                } else {
+                    result = temperature;
+                }
+            }
+
+            document.getElementById('temperatureResult').innerText = `Результат: ${result.toFixed(2)} ${toUnit}`;
+        }
+    </script>
+    <body>
+        <div class="beginning">
+            <img id="avatar" src="https://yt3.googleusercontent.com/5CcYW94zEgWNeeVk0G_EAX7O8dveNcmBQfhSiE0HshfHWskad65dlFCtivzNHFTEnQI2bnUD=s176-c-k-c0x00ffffff-no-rj" class="center" >
+            <h1>Привіт! Мене звати nyuxmumryk(також відомий як TSEPLNK)</h1>
+            <p>Мені 12 років. Народився 16.06.2012. Люблю робити відео на Ютуб. Посилання знизу.</p>
+            <button class="silka"><a href="https://youtube.com/@nyuxmumryk">Мій Ютуб</a></button>
+            <p>Живу в Херсоні. Записався на курс Summer IT School, де буду вивчати Java, HTML, CSS, JavaScript.</p>
+            <p>Закінчив 6 клас на відмінно всі предмети крім англійської мови, яку закінчив на 8 балів.</p>
+            <p>Також маю телеграм @nyuxmumryk</p>
+            <button class="silka"><a href="https://t.me/nyuxmumryk">Мій Телеграм</a></button>
+            <p>Із програмування знаю тільки Python.</p>
+            <p>Це першопочаток моєї аватарки</p>
+            <img id="avatar" src="data:image/jpeg;base64,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">
+            <p>Цей сайт був зроблений @BrimTECH</p>
+            <button class="silka"><a href="https://t.me/BrimTECH">Телеграм @BrimTECH</a></button>
+            <p>Ось декілька корисностей з мого сайту</p>
+        </div>
+        <div class="container">
+            <h1>Конвертер величин з метру</h1>
+            <div class="converter">
+                <input type="number" id="inputValue" placeholder="Ваше число">
+                </select>
+                <select id="outputUnit">
+                    <option value="mm">Міліметри</option>
+                    <option value="cm">Сантиметри</option>
+                    <option value="m">Метри</option>
+                    <option value="km">Кілометри</option>
+                    <option value="yard">Ярди</option>
+                    <option value="ft">Фути</option>
+                    <option value="inch">Дюйми</option>
+                </select>
+                <button onclick="convert()">Конвертувати</button>
+                <br>
+                <p id="outputValue"></p>
+            </div>
+        </div>
+        <h1>Конвертер Валюти і Температури</h1>
+
+    <div>
+        <h2>Конвертер Валюти</h2>
+        <label for="amount">Сума:</label>
+        <input type="number" id="amount" step="0.01" required>
+        <label for="fromCurrency">З:</label>
+        <select id="fromCurrency">
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="UAH">UAH</option>
+        </select>
+        <label for="toCurrency">В:</label>
+        <select id="toCurrency">
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="UAH">UAH</option>
+        </select>
+        <button onclick="convertCurrency()">Конвертувати</button>
+        <p id="currencyResult"></p>
+    </div>
+
+    <div>
+        <h2>Конвертер Температури</h2>
+        <label for="temperature">Температура:</label>
+        <input type="number" id="temperature" step="0.01" required>
+        <label for="fromUnit">З:</label>
+        <select id="fromUnit">
+            <option value="Celsius">Цельсій</option>
+            <option value="Fahrenheit">Фаренгейт</option>
+            <option value="Kelvin">Кельвін</option>
+        </select>
+        <label for="toUnit">В:</label>
+        <select id="toUnit">
+            <option value="Celsius">Цельсій</option>
+            <option value="Fahrenheit">Фаренгейт</option>
+            <option value="Kelvin">Кельвін</option>
+        </select>
+        <button onclick="convertTemperature()">Конвертувати</button>
+        <p id="temperatureResult"></p>
+    </div>
+    <div class="yt">
+        <h1>Мій Ютуб</h1>
+        <h2>Моє перше відео на Ютуб з монтажем й моє улюблене відео</h2>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/9ctHKyNHJIU" allowfullscreen></iframe>
+        </div>
+        <h2>Це відео мене зробило популярним</h2>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/V4l-2PyhaC4" allowfullscreen></iframe>
+        </div>
+        <h2>Це відео найновіше</h2>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/PW3jz-eNkhw" allowfullscreen></iframe>
+        </div>
+    </div>
+    </body>
+    <script src="script.js"></script>
+</html>     
